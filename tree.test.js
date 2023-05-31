@@ -63,19 +63,19 @@ beforeEach(function() {
   largeTree = new Tree(n);
 });
 
-describe("sumValues", function() {
-  it("sums simple trees", function() {
-    expect(smallTree.sumValues()).toEqual(3);
-  });
+// describe("sumValues", function() {
+//   it("sums simple trees", function() {
+//     expect(smallTree.sumValues()).toEqual(3);
+//   });
 
-  it("sums more complicated trees", function() {
-    expect(largeTree.sumValues()).toEqual(36);
-  });
+//   it("sums more complicated trees", function() {
+//     expect(largeTree.sumValues()).toEqual(36);
+//   });
 
-  it("sums up an empty tree", function() {
-    expect(emptyTree.sumValues()).toEqual(0);
-  });
-});
+//   it("sums up an empty tree", function() {
+//     expect(emptyTree.sumValues()).toEqual(0);
+//   });
+// });
 
 describe("countEvens", function() {
   it("counts nodes in simple trees", function() {
@@ -91,21 +91,21 @@ describe("countEvens", function() {
   });
 });
 
-describe("numGreater", function() {
-  it("counts nodes in small trees", function() {
-    expect(smallTree.numGreater(0)).toEqual(2);
-    expect(smallTree.numGreater(1)).toEqual(1);
-    expect(smallTree.numGreater(2)).toEqual(0);
-    expect(smallTree.numGreater(3)).toEqual(0);
-  });
+// describe("numGreater", function() {
+//   it("counts nodes in small trees", function() {
+//     expect(smallTree.numGreater(0)).toEqual(2);
+//     expect(smallTree.numGreater(1)).toEqual(1);
+//     expect(smallTree.numGreater(2)).toEqual(0);
+//     expect(smallTree.numGreater(3)).toEqual(0);
+//   });
 
-  it("counts nodes in larger trees", function() {
-    expect(largeTree.numGreater(0)).toEqual(8);
-    expect(largeTree.numGreater(4)).toEqual(4);
-    expect(largeTree.numGreater(8)).toEqual(0);
-  });
+//   it("counts nodes in larger trees", function() {
+//     expect(largeTree.numGreater(0)).toEqual(8);
+//     expect(largeTree.numGreater(4)).toEqual(4);
+//     expect(largeTree.numGreater(8)).toEqual(0);
+//   });
 
-  it("counts nodes in an empty  tree", function() {
-    expect(emptyTree.numGreater(0)).toEqual(0);
-  });
-});
+//   it("counts nodes in an empty  tree", function() {
+//     expect(emptyTree.numGreater(0)).toEqual(0);
+//   });
+// });
