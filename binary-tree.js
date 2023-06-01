@@ -36,7 +36,7 @@ class BinaryTreeNode {
     // have a variable to track right depth
     // check right side
         // right depth + this.right.minDepth()
-        
+
     // return min depth + the min of left depth/right depth
   }
 
@@ -96,7 +96,36 @@ class BinaryTreeNode {
    * that is larger than lowerBound. Return null if no such value exists. */
 
   nextLarger(lowerBound) {
+    console.log("THIS", this);
+    if (this.left === null && this.right === null) {
+      if (this.val < lowerBound) {
+        return
+      } else {
+        return this.val
+      }
+    }
 
+    let leftDepth;
+    if (this.left !== null) {
+    leftDepth = this.left.minDepth();
+    }
+
+    let rightDepth;
+    if (this.right !== null) {
+    rightDepth = this.right.minDepth();
+    }
+
+    console.log("LEFT:", leftDepth, "RIGHT:", rightDepth);
+    if (leftDepth && rightDepth) {
+      console.log("both are greater than 0");
+      return Math.min(leftDepth, rightDepth);
+    } else if (leftDepth === 0) {
+      console.log("left depth is 0")
+      return minDepth + rightDepth;
+    } else {
+      console.log("right is 0");
+      return minDepth + leftDepth;
+    }
   }
 }
 
